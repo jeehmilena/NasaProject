@@ -4,4 +4,7 @@
     <string name="description">Description</string>
     <string name="apod">APOD</string>
     <string name="apod_image">Apod image</string>
+    <string name="nasa_image">Nasa image</string>
+    <string name="intro_text_information">One of NASA\'s most popular sites is Astronomy Picture of the Day in this app you can search the image of the day.</string>
+    <string name="lets_start">let\'s start</string>
 </resources>
