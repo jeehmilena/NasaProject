@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.nasaproject.R
@@ -25,6 +26,7 @@ import com.squareup.picasso.Picasso
 class HomeActivity : AppCompatActivity() {
     private lateinit var inputDate: TextInputLayout
     private lateinit var buttonSend: AppCompatButton
+    private lateinit var apodDetails: ConstraintLayout
     private lateinit var titileDescription: AppCompatTextView
     private lateinit var imageApod: AppCompatImageView
     private lateinit var textDescriptionApod: AppCompatTextView
@@ -49,6 +51,7 @@ class HomeActivity : AppCompatActivity() {
     private fun initViews() {
         inputDate = findViewById(R.id.til_data)
         buttonSend = findViewById(R.id.bt_apod)
+        apodDetails = findViewById(R.id.layout_apod_details)
         titileDescription = findViewById(R.id.tv_title_description)
         imageApod = findViewById(R.id.iv_apod_image)
         textDescriptionApod = findViewById(R.id.tv_apod_description)
@@ -83,7 +86,7 @@ class HomeActivity : AppCompatActivity() {
     private fun showApodDate(apod: ApodResult) {
         progressBar.visibility = View.GONE
 
-        titileDescription.visibility = View.VISIBLE
+        apodDetails.visibility = View.VISIBLE
 
         Picasso.with(this)
             .load(apod.url)
