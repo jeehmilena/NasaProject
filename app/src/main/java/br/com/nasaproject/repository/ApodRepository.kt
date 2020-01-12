@@ -11,7 +11,6 @@ class ApodRepository {
     suspend fun getApodDate(date: String) = withContext(Dispatchers.IO) {
         try {
             return@withContext Service.service.getApodDay(API_KEY, date)
-
         } catch (exception: Exception) {
             val error = exception.message
             return@withContext error
