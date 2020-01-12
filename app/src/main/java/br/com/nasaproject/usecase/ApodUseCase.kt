@@ -6,5 +6,5 @@ import java.util.*
 
 class ApodUseCase(val repository: ApodRepository) {
 
-    suspend fun apodDate(date: Date): ApodResult = repository.getApodDate(date)
+    suspend fun apodDate(date: String): ApodResult = repository.getApodDate(date) as ApodResult
 }

@@ -9,6 +9,6 @@ interface NasaApi {
     @GET("planetary/apod")
     suspend fun getApodDay(
         @Query("api_key") api: String,
-        @Query("date") date: Date
+        @Query("date") date: String
     ): ApodResult
 }

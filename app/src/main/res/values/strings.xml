@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Nasa Project</string>
-    <string name="enter_a_date">enter a date</string>
+    <string name="enter_a_date">enter a date in format dd/mm/yyyy</string>
     <string name="description">Description</string>
+    <string name="apod">APOD</string>
+    <string name="apod_image">Apod image</string>
 </resources>
