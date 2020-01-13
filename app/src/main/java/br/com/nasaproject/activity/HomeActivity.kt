@@ -80,7 +80,14 @@ class HomeActivity : AppCompatActivity() {
 
     private fun sendDate() {
         val date = inputDate.editText?.text.toString().converteData()
-        viewModel.interactor(ApodInteractor.ApodDate(date))
+        when {
+            date.isNotEmpty() -> {
+                viewModel.interactor(ApodInteractor.ApodDate(date))
+            }
+            else -> {
+                Snackbar.make(inputDate, "Empty field", Snackbar.LENGTH_LONG).show()
+            }
+        }
     }
 
     private fun showApodDate(apod: ApodResult) {
